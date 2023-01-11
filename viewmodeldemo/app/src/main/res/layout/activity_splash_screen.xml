@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".splashscreen.SplashScreenActivity"
+        android:layout_marginTop="@dimen/_50sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:src="@drawable/splashscreen"
+            app:layout_constraintBottom_toTopOf="@id/txt_welcome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/welcome"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/thousend_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/create_and_account_and_access_thousand"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_welcome" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/ofCoolStuffes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@string/of_cool_stuffes"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/thousend_account" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStart"
+            style="@style/btnsignin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:text="@string/getting_started"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ofCoolStuffes" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/alreadyCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="@string/alredy_have_an_account"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/signUp"
+            app:layout_constraintEnd_toStartOf="@id/signUp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnStart" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/alreadyCreateAccount"
+            app:layout_constraintTop_toBottomOf="@id/btnStart"
+            app:layout_constraintTop_toTopOf="@id/alreadyCreateAccount" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

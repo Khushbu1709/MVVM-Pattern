@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="signUpViewModel"
+            type="com.example.viewmodeldemo.signUp.activity.SingUpViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".signUp.activity.SignUpActivity">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_login_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/sign_up"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profilePicture"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/placeholder"
+                app:layout_constraintBottom_toTopOf="@id/imageDeleteText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_login_now" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/imageDeleteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/remove"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@id/inputLayoutName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profilePicture" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:hint="@string/enter_your_name"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageDeleteText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:inputType="textEmailAddress"
+                    android:text="@={signUpViewModel.name}"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:hint="@string/enter_your_email"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputLayoutName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:inputType="textEmailAddress"
+                    android:text="@={signUpViewModel.email}"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:hint="@string/enter_your_password"
+                app:hintTextColor="@color/gray"
+                app:layout_constraintEnd_toEndOf="@id/inputLayoutEmail"
+                app:layout_constraintStart_toStartOf="@id/inputLayoutEmail"
+                app:layout_constraintTop_toBottomOf="@+id/inputLayoutEmail"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:inputType="textPassword"
+                    android:text="@={signUpViewModel.password}"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:backgroundTint="@color/black"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/inputLayoutPassword"
+                app:layout_constraintStart_toStartOf="@id/inputLayoutPassword"
+                app:layout_constraintTop_toBottomOf="@+id/inputLayoutPassword" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dontHaveAnAccount"
+                android:layout_width="139dp"
+                android:layout_height="14dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:text="@string/don_t_have_an_account"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/signUp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSignUp"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/signUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@string/sign_in"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dontHaveAnAccount"
+                app:layout_constraintTop_toTopOf="@+id/dontHaveAnAccount" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</layout>

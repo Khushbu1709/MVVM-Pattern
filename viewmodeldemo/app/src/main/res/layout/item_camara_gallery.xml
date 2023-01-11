@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:elevation="@dimen/_100sdp"
+    app:cardUseCompatPadding="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_begin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_20sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_end"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_20sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_top"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/_20sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_bottom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/_20sdp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgCamera"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/camara"
+            app:layout_constraintEnd_toStartOf="@+id/imgGallery"
+            app:layout_constraintStart_toEndOf="@+id/guide_begin"
+            app:layout_constraintTop_toTopOf="@+id/guide_top" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/camara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera"
+            app:layout_constraintBottom_toBottomOf="@+id/guide_bottom"
+            app:layout_constraintEnd_toEndOf="@+id/imgCamera"
+            app:layout_constraintStart_toStartOf="@+id/imgCamera"
+            app:layout_constraintTop_toBottomOf="@+id/imgCamera" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgGallery"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:src="@drawable/gallery"
+            app:layout_constraintEnd_toEndOf="@+id/guide_end"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toEndOf="@+id/imgCamera"
+            app:layout_constraintTop_toTopOf="@+id/imgCamera" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery"
+            app:layout_constraintBottom_toBottomOf="@+id/camara"
+            app:layout_constraintEnd_toEndOf="@+id/imgGallery"
+            app:layout_constraintStart_toEndOf="@+id/camara"
+            app:layout_constraintStart_toStartOf="@+id/imgGallery"
+            app:layout_constraintTop_toBottomOf="@+id/imgGallery" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

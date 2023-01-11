@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">View model demo</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+
+    <!-- ........................validation..................................-->
+
+    <string name="enter_yoy_email">Enter Yoy Email</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_your_email">Enter Your Email</string>
+
+    <!-- ......................Validation error .............................-->
+
+    <string name="plz_enter_name">Please Enter Your Name</string>
+    <string name="plz_enter_email">Please Enter Your Email</string>
+    <string name="plz_enter_pass">Please Enter Your Password</string>
+    <string name="password_six">Password must be six character</string>
+    <string name="plz_fill_detail">Please Filled Detail</string>
+    <string name="plz_select_img">Please Selected Image</string>
+    <string name="Profile_img">Profile Picture</string>
+
+    <!-- ....................Validation Pattern ........................ -->
+
+    <string name="plz_valid_email">Please Enter Your Valid Email</string>
+    <string name="plz_valid_epass">Please Enter Your Valid Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="error">Error</string>
+
+
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="internet_connection">Internet connection not available</string>
+    <string name="logout">Logout</string>
+
+    <string name="wrong">Something Want to wrong</string>
+    <string name="success">Login SuccessFully</string>
+    <string name="register_success">Registration SuccessFully</string>
+    <string name="email_pass_exist">Email and Password already exist</string>
+
+
+    <string name="data_not_found">Not Data Found</string>
+    <string name="not_success">Not Success</string>
+
+    <!--.......................... splashScreen.............-->
+
+    <string name="welcome">Welcome</string>
+    <string name="create_and_account_and_access_thousand">Create and account and access thousand</string>
+    <string name="of_cool_stuffes">of cool stuffes</string>
+    <string name="getting_started">Getting Started</string>
+    <string name="alredy_have_an_account">Alredy have an account ?</string>
+    <string name="log_in">Log In</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="account_logout">Your Account Logout?</string>
+    <string name="loading">Loading..</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="permission_setting">Permission Setting</string>
+    <string name="setting">Setting</string>
+
+    <string name="select_any_one_option">Select Any One option Camera And Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="not_select_Image">Not Select Image</string>
+    <string name="remove">Remove</string>
+
+
+</resources>

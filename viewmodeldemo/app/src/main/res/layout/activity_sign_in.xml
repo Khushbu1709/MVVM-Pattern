@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="SignInModel"
+            type="com.example.viewmodeldemo.signIn.SignInViewModel" />
+
+
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".signIn.SignInActivity">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_login_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:textSize="@dimen/_24ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:hint="@string/enter_your_email"
+                app:boxStrokeColor="@color/black"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_login_now">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:inputType="textEmailAddress"
+                    android:text="@={SignInModel.edtEmail}"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:hint="@string/enter_your_password"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/gray"
+                app:layout_constraintEnd_toEndOf="@id/inputLayoutEmail"
+                app:layout_constraintStart_toStartOf="@id/inputLayoutEmail"
+                app:layout_constraintTop_toBottomOf="@+id/inputLayoutEmail"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:inputType="textPassword"
+                    android:text="@={SignInModel.edtPass}"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignIn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:backgroundTint="@color/black"
+                android:text="@string/sign_in"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/inputLayoutPassword"
+                app:layout_constraintStart_toStartOf="@id/inputLayoutPassword"
+                app:layout_constraintTop_toBottomOf="@+id/inputLayoutPassword" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:backgroundTint="@color/black"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/inputLayoutPassword"
+                app:layout_constraintStart_toStartOf="@id/inputLayoutPassword"
+                app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
